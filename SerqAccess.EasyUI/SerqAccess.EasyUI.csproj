@@ -89,9 +89,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\EasyData\SerqAccess.EasyData.csproj">
       <Project>{dc3e225b-6bfd-4b41-b013-9f08411401e3}</Project>
       <Name>SerqAccess.EasyData</Name>
