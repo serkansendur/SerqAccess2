@@ -1,0 +1,48 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SerqAccess.EasyData", "EasyData\SerqAccess.EasyData.csproj", "{DC3E225B-6BFD-4B41-B013-9F08411401E3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SerqAccess.EasyUI", "SerqAccess.EasyUI\SerqAccess.EasyUI.csproj", "{9216842C-AD19-45DF-8B15-91E431EAA28B}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 3
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://serkansendur.visualstudio.com/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = EasyData\\SerqAccess.EasyData.csproj
+		SccProjectName1 = EasyData
+		SccLocalPath1 = EasyData
+		SccProjectUniqueName2 = SerqAccess.EasyUI\\SerqAccess.EasyUI.csproj
+		SccProjectName2 = SerqAccess.EasyUI
+		SccLocalPath2 = SerqAccess.EasyUI
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+		TowerDev02|Any CPU = TowerDev02|Any CPU
+		TowerDev03|Any CPU = TowerDev03|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DC3E225B-6BFD-4B41-B013-9F08411401E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC3E225B-6BFD-4B41-B013-9F08411401E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC3E225B-6BFD-4B41-B013-9F08411401E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC3E225B-6BFD-4B41-B013-9F08411401E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC3E225B-6BFD-4B41-B013-9F08411401E3}.TowerDev02|Any CPU.ActiveCfg = TowerDev02|Any CPU
+		{DC3E225B-6BFD-4B41-B013-9F08411401E3}.TowerDev02|Any CPU.Build.0 = TowerDev02|Any CPU
+		{DC3E225B-6BFD-4B41-B013-9F08411401E3}.TowerDev03|Any CPU.ActiveCfg = TowerDev03|Any CPU
+		{DC3E225B-6BFD-4B41-B013-9F08411401E3}.TowerDev03|Any CPU.Build.0 = TowerDev03|Any CPU
+		{9216842C-AD19-45DF-8B15-91E431EAA28B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9216842C-AD19-45DF-8B15-91E431EAA28B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9216842C-AD19-45DF-8B15-91E431EAA28B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9216842C-AD19-45DF-8B15-91E431EAA28B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9216842C-AD19-45DF-8B15-91E431EAA28B}.TowerDev02|Any CPU.ActiveCfg = Release|Any CPU
+		{9216842C-AD19-45DF-8B15-91E431EAA28B}.TowerDev02|Any CPU.Build.0 = Release|Any CPU
+		{9216842C-AD19-45DF-8B15-91E431EAA28B}.TowerDev03|Any CPU.ActiveCfg = Release|Any CPU
+		{9216842C-AD19-45DF-8B15-91E431EAA28B}.TowerDev03|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
