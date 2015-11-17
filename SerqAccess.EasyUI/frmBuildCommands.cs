@@ -1,10 +1,13 @@
-﻿using System;
+﻿using Microsoft.SqlServer.Management.Common;
+using Microsoft.SqlServer.Management.Smo;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -43,9 +46,22 @@ namespace SerqAccess.EasyUI
         private void btnBuildCommands_Click(object sender, EventArgs e)
         {
             string SQL = txtSelectStatement.Text;
-            SqlConnection con = new SqlConnection();
-            con.ConnectionString = ConfigurationManager.ConnectionStrings[_ctrlConnectionString.SelectedConnectionString].ConnectionString;
+         
+           string conString = ConfigurationManager.ConnectionStrings[_ctrlConnectionString.SelectedConnectionString].ConnectionString;
+            var server = new Server(new ServerConnection { ConnectionString = conString});
+            server.ConnectionContext.Connect();
+            var database = server.Databases[""];
+            var output = new StringBuilder();
+
+            var table = database.Tables[""];
+            var scripter = new Scripter(server) { Options = { ScriptData = true } };
+            var script = scripter.EnumScript(new SqlSmoObject[] { table });
+            foreach (var line in script)
+                output.AppendLine(line);
+
+            txtCommandText.Text = output.ToString();
            
+
         }
 
         
