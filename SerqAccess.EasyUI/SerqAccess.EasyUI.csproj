@@ -78,6 +78,9 @@
     <EmbeddedResource Include="ctrlConnectionString.resx">
       <DependentUpon>ctrlConnectionString.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmBuildCommands.resx">
+      <DependentUpon>frmBuildCommands.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmDBConnect.resx">
       <DependentUpon>frmDBConnect.cs</DependentUpon>
     </EmbeddedResource>
