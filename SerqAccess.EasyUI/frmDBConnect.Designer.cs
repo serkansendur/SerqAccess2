@@ -28,11 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnTest = new System.Windows.Forms.Button();
-            this.cbConnectionStrings = new System.Windows.Forms.ComboBox();
-            this.lblConnectionStrings = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.cbProvider = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtSQL = new System.Windows.Forms.TextBox();
             this.btnRead = new System.Windows.Forms.Button();
@@ -40,58 +35,9 @@
             this.btnPut = new System.Windows.Forms.Button();
             this.btnExcel = new System.Windows.Forms.Button();
             this.sfd = new System.Windows.Forms.SaveFileDialog();
+            this.pnlConnectionString = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSQL)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnTest
-            // 
-            this.btnTest.Location = new System.Drawing.Point(616, 4);
-            this.btnTest.Name = "btnTest";
-            this.btnTest.Size = new System.Drawing.Size(132, 23);
-            this.btnTest.TabIndex = 0;
-            this.btnTest.Text = "Test Connection";
-            this.btnTest.UseVisualStyleBackColor = true;
-            this.btnTest.Click += new System.EventHandler(this.btnTest_Click);
-            // 
-            // cbConnectionStrings
-            // 
-            this.cbConnectionStrings.FormattingEnabled = true;
-            this.cbConnectionStrings.Location = new System.Drawing.Point(189, 6);
-            this.cbConnectionStrings.Name = "cbConnectionStrings";
-            this.cbConnectionStrings.Size = new System.Drawing.Size(166, 21);
-            this.cbConnectionStrings.TabIndex = 1;
-            // 
-            // lblConnectionStrings
-            // 
-            this.lblConnectionStrings.AutoSize = true;
-            this.lblConnectionStrings.Location = new System.Drawing.Point(89, 9);
-            this.lblConnectionStrings.Name = "lblConnectionStrings";
-            this.lblConnectionStrings.Size = new System.Drawing.Size(100, 13);
-            this.lblConnectionStrings.TabIndex = 2;
-            this.lblConnectionStrings.Text = "Connection strings :";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(372, 9);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(49, 13);
-            this.label3.TabIndex = 9;
-            this.label3.Text = "Provider:";
-            // 
-            // cbProvider
-            // 
-            this.cbProvider.FormattingEnabled = true;
-            this.cbProvider.Items.AddRange(new object[] {
-            "ODP",
-            "OLEDB",
-            "ODBC",
-            "ORACLECLIENT",
-            "SQL SERVER"});
-            this.cbProvider.Location = new System.Drawing.Point(426, 6);
-            this.cbProvider.Name = "cbProvider";
-            this.cbProvider.Size = new System.Drawing.Size(166, 21);
-            this.cbProvider.TabIndex = 10;
             // 
             // label4
             // 
@@ -158,22 +104,25 @@
             // 
             this.sfd.Filter = "Excel File|*.xlsx";
             // 
+            // pnlConnectionString
+            // 
+            this.pnlConnectionString.Location = new System.Drawing.Point(57, 0);
+            this.pnlConnectionString.Name = "pnlConnectionString";
+            this.pnlConnectionString.Size = new System.Drawing.Size(794, 31);
+            this.pnlConnectionString.TabIndex = 17;
+            // 
             // frmDBConnect
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1054, 485);
+            this.Controls.Add(this.pnlConnectionString);
             this.Controls.Add(this.btnExcel);
             this.Controls.Add(this.btnPut);
             this.Controls.Add(this.dgvSQL);
             this.Controls.Add(this.btnRead);
             this.Controls.Add(this.txtSQL);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.cbProvider);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.lblConnectionStrings);
-            this.Controls.Add(this.cbConnectionStrings);
-            this.Controls.Add(this.btnTest);
             this.Name = "frmDBConnect";
             this.Text = "ConnectionTest";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmDBConnect_FormClosing);
@@ -185,12 +134,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnTest;
-        private System.Windows.Forms.ComboBox cbConnectionStrings;
-        private System.Windows.Forms.Label lblConnectionStrings;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox cbProvider;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtSQL;
         private System.Windows.Forms.Button btnRead;
@@ -198,5 +141,6 @@
         private System.Windows.Forms.Button btnPut;
         private System.Windows.Forms.Button btnExcel;
         private System.Windows.Forms.SaveFileDialog sfd;
+        private System.Windows.Forms.Panel pnlConnectionString;
     }
 }

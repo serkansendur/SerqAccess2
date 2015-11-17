@@ -20,7 +20,9 @@ namespace SerqAccess.EasyUI
 {
     public partial class frmDBConnect : Form
     {
+        private ctrlConnectionString _ctrlConnectionString = new ctrlConnectionString();
         private string conString;
+        private bool _ctrlLoaded = false;
         
         private static frmDBConnect _instance;
         public static frmDBConnect GetInstance()
@@ -34,62 +36,27 @@ namespace SerqAccess.EasyUI
 
         private void btnTest_Click(object sender, EventArgs e)
         {
-            conString = ConfigurationManager.ConnectionStrings[cbConnectionStrings.SelectedItem.ToString()].ConnectionString;
-            DBManager dbManager = null;
-            try
-            {
-                string provider = cbProvider.SelectedItem.ToString();
-                switch (provider)
-                {
-                    case "ODP":
-                        dbManager = new ODPDBManager(conString);
-                        break;
-                    case "OLEDB":
-                        dbManager = new OleDBManager(conString);
-                        break;
-                    case "ODBC":
-                        dbManager = new ODBCDBManager(conString);
-                        break;
-                    case "ORACLECLIENT":
-                        dbManager = new OracleDBManager(conString);
-                        break;
-                    case "SQL SERVER":
-                        dbManager = new SQLDBManager(conString);
-                        break;
-                }
-                dbManager.OpenConnection();
-                MessageBox.Show("Connection succeeded.");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Connection failed: " + ex.Message);
-            }
-            finally
-            {
-                if (dbManager != null)
-                {
-                    dbManager.Dispose();
-                }
-            }
+            
 
         }
 
         private void ConnectionTest_Load(object sender, EventArgs e)
         {
-            ConnectionStringSettingsCollection connectionStrings = ConfigurationManager.ConnectionStrings;
-            foreach (ConnectionStringSettings conSet in connectionStrings)
+            if(!_ctrlLoaded)
             {
-                cbConnectionStrings.Items.Add(conSet.Name);
+                pnlConnectionString.Controls.Add(_ctrlConnectionString);
+                _ctrlLoaded = true;
             }
+           
         }
 
         private void btnExecute_Click(object sender, EventArgs e)
         {
-            conString = ConfigurationManager.ConnectionStrings[cbConnectionStrings.SelectedItem.ToString()].ConnectionString;
+            conString = ConfigurationManager.ConnectionStrings[_ctrlConnectionString.SelectedConnectionString].ConnectionString;
             DBManager dbManager = null;
             try
             {
-                string provider = cbProvider.SelectedItem.ToString();
+                string provider = _ctrlConnectionString.SelectedProvider;
                 switch (provider)
                 {
                     case "ODP":
@@ -134,11 +101,11 @@ namespace SerqAccess.EasyUI
 
         private void btnPut_Click(object sender, EventArgs e)
         {
-            conString = ConfigurationManager.ConnectionStrings[cbConnectionStrings.SelectedItem.ToString()].ConnectionString;
+            conString = ConfigurationManager.ConnectionStrings[_ctrlConnectionString.SelectedConnectionString].ConnectionString;
             DBManager dbManager = null;
             try
             {
-                string provider = cbProvider.SelectedItem.ToString();
+                string provider = _ctrlConnectionString.SelectedProvider;
                 switch (provider)
                 {
                     case "ODP":

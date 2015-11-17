@@ -49,6 +49,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ctrlConnectionString.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ctrlConnectionString.Designer.cs">
+      <DependentUpon>ctrlConnectionString.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBuildCommands.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBuildCommands.Designer.cs">
+      <DependentUpon>frmBuildCommands.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmDBConnect.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -63,6 +75,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ctrlConnectionString.resx">
+      <DependentUpon>ctrlConnectionString.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmDBConnect.resx">
       <DependentUpon>frmDBConnect.cs</DependentUpon>
     </EmbeddedResource>

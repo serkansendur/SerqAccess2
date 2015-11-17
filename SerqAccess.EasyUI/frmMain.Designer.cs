@@ -34,6 +34,7 @@
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.mnDBConnect = new System.Windows.Forms.ToolStripMenuItem();
+            this.buildCommandsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -57,7 +58,8 @@
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mnDBConnect});
+            this.mnDBConnect,
+            this.buildCommandsToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(989, 24);
@@ -70,6 +72,13 @@
             this.mnDBConnect.Size = new System.Drawing.Size(79, 20);
             this.mnDBConnect.Text = "DBConnect";
             this.mnDBConnect.Click += new System.EventHandler(this.mnDBConnect_Click);
+            // 
+            // buildCommandsToolStripMenuItem
+            // 
+            this.buildCommandsToolStripMenuItem.Name = "buildCommandsToolStripMenuItem";
+            this.buildCommandsToolStripMenuItem.Size = new System.Drawing.Size(111, 20);
+            this.buildCommandsToolStripMenuItem.Text = "Build Commands";
+            this.buildCommandsToolStripMenuItem.Click += new System.EventHandler(this.buildCommandsToolStripMenuItem_Click);
             // 
             // frmMain
             // 
@@ -97,6 +106,7 @@
         private System.Windows.Forms.ToolTip toolTip;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem mnDBConnect;
+        private System.Windows.Forms.ToolStripMenuItem buildCommandsToolStripMenuItem;
     }
 }
 

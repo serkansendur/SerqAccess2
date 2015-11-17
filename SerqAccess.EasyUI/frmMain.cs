@@ -25,6 +25,14 @@ namespace SerqAccess.EasyUI
             frm.BringToFront();
             frm.Show();
         }
-        
+
+        private void buildCommandsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmBuildCommands frm = frmBuildCommands.GetInstance();
+            frm.MdiParent = this;
+            frm.WindowState = FormWindowState.Maximized;
+            frm.BringToFront();
+            frm.Show();
+        }
     }
 }
